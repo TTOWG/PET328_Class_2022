@@ -1,19 +1,22 @@
+#Computing For Dolomite
 dcc = float(input('Number of Dolomite Cores: '))
 ndc = float(input('Number of all cores: '))
 PD = dcc/ndc
 loc = float(input('Mean of Dolomite Data: '))
 scale = float(input('Standard Deviation of Dolomite Data: '))
 import scipy.stats
-PodD60 = 1-scipy.stats.norm(loc,scale).cdf(60)
-
+PodD60 = 1-scipy.stats.norm(loc,scale).cdf(0.5)
+#Computing For Shale
 dcs = float(input('Number of shale cores: '))
 PS = dcs/ndc
 loc = float(input('Mean of Shale Data: '))
 scale = float(input('Standard Devition of Shale data: '))
 import scipy.stats
-podS60 = 1-scipy.stats.norm(loc,scale).cdf(60)
+podS60 = 1-scipy.stats.norm(loc,scale).cdf(0.5)
+#gamma log reading is greater than 60
 PlD_gamma60 = (PD*PodD60)/(PD*PodD60+PS*podS60)
+#Classifying The Intervals
 if PlD_gamma60 >= 0.5:
-    print('The Interval is Dolomite')
+    print('The Interval is Dolomite.')
 else:
-    print('It is a Shale Interval')
+    print('It is a Shale Interval.')
