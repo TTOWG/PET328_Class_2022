@@ -1,7 +1,8 @@
-#unconditional probability that the interval is Dolomite or Shale
 dcc = float(input('Number of Dolomite Cores: '))
 dcs = float(input('Number of shale cores: '))
+# Total number of Cores
 ndc = dcc+dcs
+#unconditional probability that the interval is Dolomite or Shale
 PD = dcc/ndc
 PS = dcs/ndc
 #conditional probability of obtaining a gamma log reading greater than 60 in the Dolomite and Shale lithology
