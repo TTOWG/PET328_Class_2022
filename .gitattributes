@@ -1,7 +1,7 @@
 loc_d = float (input('Enter your loc for dolomite:' ))
 scale_d = float (input('Enter your scale for dolomite:' ))
-loc_s = float (input ('Enter your loc for shale:' ))
-scale_s = float (input ('Enter your scale for shale:'))
+loc_s = float (input('Enter your loc for shale:' ))
+scale_s = float (input('Enter your scale for shale:'))
 count_d = float (input('Enter count for dolomite:'))
 count_s = float (input('Enter count for shale:'))
 #no_c =  Number of all cores
