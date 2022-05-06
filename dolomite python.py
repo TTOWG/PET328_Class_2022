@@ -11,8 +11,8 @@ P_S = sha_num/allcrs_num
 
 import scipy.stats
 
-pgamgre_60d = 1 - scipy.stats.norm(dolo_mean, dolo_sta).cdf(0.5)
-pgamgre_60s = 1 - scipy.stats.norm(sha_mean, sha_sta).cdf(0.5)
+pgamgre_60d = 1 - scipy.stats.norm(dolo_mean, dolo_sta).cdf(60)
+pgamgre_60s = 1 - scipy.stats.norm(sha_mean, sha_sta).cdf(60)
 
 
 pdgamgre_60 = P_D*pgamgre_60d/P_D*pgamgre_60d + P_S*pgamgre_60s
