@@ -10,8 +10,8 @@ Tcore = dol + shl
 PD = dol/Tcore
 PS = shl/Tcore
 #P(gamma>60|D) and P(gamma>60|S) being calculated
-PDF = 1 - scipy.stats.norm(loc = dol_mean, scale = dolSD).cdf(0.5)
-PSF = 1 - scipy.stats.norm(loc = shl_mean, scale = shlSD).cdf(0.5)
+PDF = 1 - scipy.stats.norm(loc = dol_mean, scale = dolSD).cdf(60)
+PSF = 1 - scipy.stats.norm(loc = shl_mean, scale = shlSD).cdf(60)
 #Define the formula
 a = PD*PDF
 b = PS*PSF
