@@ -9,7 +9,7 @@ def gas_density(gravity, pressure = 14.7, temperature = 520, z = 1):
     density = (2.70*pressure*gravity)/(z*temperature)
     return round(density, 4)
 
-
+# round(gas_density(0.78), 3)
 
 ######## A function to estimate bubble point pressure, pb ########
 # Note: this function only works if solution gas-oil ratio at a pressure above bubble point (i.e. Rsi (=Rsb)) is known
@@ -43,7 +43,7 @@ def sol_gor(temperature, pressure, gas_gravity, oil_gravity, pb): # where pb is 
 # For pressures below bubble point, only rs may be skipped.
 # co is required if pressure is above bubble point; otherwise, it must be skipped.
 # A few notes about defaulted parameters pb, rs and co.
-    # They are defaulted - hence, users ma skip them when specifying argument values.
+    # They are defaulted - hence, users may skip them when specifying argument values.
     # They are defaulted to None (nothing). So, if a user skip them, what value is used?
     # For co:
             # co is truly optional!
@@ -57,7 +57,7 @@ def sol_gor(temperature, pressure, gas_gravity, oil_gravity, pb): # where pb is 
             # They are only optional in the context of argument specification
             # In usage, they are not optional, the function need their values
             # If a user specify their values, the specified value(s) overides the default (None) and get used in computation.
-            # If a user did not specify their values, function fvf itself computes their velues internally by calling functions bubble_pressure and sol_gor
+            # If a user did not specify their values, function fvf itself computes their values internally by calling functions bubble_pressure and sol_gor
             # Functions bubble_pressure and sol_gor are also defined in here in peteng.py
             # The internally-computed values of pb and rs then overides the default values (None) and get used in computation.
 
